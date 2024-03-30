@@ -5,7 +5,6 @@ const client = new MongoClient(url)
 
 const db = client.db("my_store")
 
-//todo: create product
 const insert = async (product) => {
     try {
         await client.connect()
@@ -19,7 +18,6 @@ const insert = async (product) => {
     }
 }
 
-//todo: get product by id
 const findById = async (id) => {
     try {
         await client.connect()
@@ -32,7 +30,6 @@ const findById = async (id) => {
     }
 }
 
-//todo: get list product
 const findAll = async () => {
     try {
         await client.connect()
@@ -47,7 +44,6 @@ const findAll = async () => {
     }
 }
 
-//todo: update product
 const updateById = async (product) => {
     try {
         await client.connect()
@@ -67,7 +63,6 @@ const updateById = async (product) => {
     }
 }
 
-//todo: delete product
 const deleteById = async (id) => {
     try {
         await client.connect()

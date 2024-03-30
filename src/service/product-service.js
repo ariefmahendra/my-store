@@ -3,9 +3,7 @@ import {ObjectId} from "mongodb";
 import {createProductValidation, updateProductValidation} from "../validation/product-validation.js";
 import {validate} from "../validation/validation.js";
 import {ResponseError} from "../error/response-error.js";
-import e from "express";
 
-//todo: create product service
 const createProduct = async (payload) => {
     payload = validate(createProductValidation, payload)
 
@@ -23,7 +21,7 @@ const createProduct = async (payload) => {
     }
 }
 
-//todo: get product by id service
+
 const getProductById = async (id) => {
     try {
         const productId = new ObjectId(id)
@@ -49,7 +47,7 @@ const getProductById = async (id) => {
     }
 }
 
-//todo: get all product service
+
 const getProduct = async () => {
     try {
         const productsList = await productRepository.findAll()
@@ -76,7 +74,7 @@ const getProduct = async () => {
     }
 }
 
-//todo: update product service
+
 const updateProduct = async (payload) => {
     payload = validate(updateProductValidation, payload)
     payload.id = new ObjectId(payload.id)
@@ -98,7 +96,7 @@ const updateProduct = async (payload) => {
     }
 }
 
-//todo: delete product service
+
 const deleteProduct = async (id) => {
     try {
         const deletedProduct = await productRepository.deleteById(new ObjectId(id))
