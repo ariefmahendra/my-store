@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="main.js"></script>
+    <link rel="stylesheet" href="style.css">
+    <title>My App</title>
+</head>
+<body>
+<nav>
+    <div class="nav-name"><a href="index.html">My Store</a></div>
+    <div class="btn-navbar" onclick="renderCreateNewProductForm()">Add New Product</div>
+</nav>
+    <section id="content" class="content"></section>
+    <div id="popup" class="popup-container"></div>
+    <form id="popup-form" class="card-form-popup">
+        <div class="form-container">
+            <h5 class="card-title-update">Update Product</h5>
+            <input type="hidden" id="id" name="id" class="form-control" readonly>
+            <div class="form-group">
+                <label for="name">Name</label>
+                <input type="text" id="name" name="name" class="form-control">
+            </div>
+            <div class="form-group">
+                <label for="price">Price</label>
+                <input type="number" id="price" name="price" class="form-control">
+            </div>
+            <div class="form-group">
+                <label for="description">Description</label>
+                <input type="text" id="description" name="description" class="form-control">
+            </div>
+            <div class="form-group">
+                <label for="quantity">Quantity</label>
+                <input type="number" id="quantity" name="quantity" class="form-control">
+            </div>
+            <div class="container-btn-card">
+                <button class="btn" onclick="updateItem()" >Submit</button>
+                <button class="btn" onClick="closeButtonForm()">Close</button>      
+            </div>
+        </div>
+    </form>
+    <form id="form-add-product" class="card-form-popup">
+        <div class="form-container">
+            <h5 class="card-title-update">Create New Product</h5>
+            <div class="form-group">
+                <label for="name">Name</label>
+                <input type="text" id="name-new-product" name="name" class="form-control">
+            </div>
+            <div class="form-group">
+                <label for="price">Price</label>
+                <input type="number" id="price-new-product" name="price" class="form-control">
+            </div>
+            <div class="form-group">
+                <label for="description">Description</label>
+                <input type="text" id="description-new-product" name="description" class="form-control">
+            </div>
+            <div class="form-group">
+                <label for="quantity">Quantity</label>
+                <input type="number" id="quantity-new-product" name="quantity" class="form-control">
+            </div>
+            <div class="container-btn-card">
+                <button class="btn" onclick="postNewProduct()" >Create</button>
+                <button class="btn" onClick="closeButtonFormNewProduct()">Close</button>
+            </div>
+        </div>
+    </form>
+</body>
+</html>
