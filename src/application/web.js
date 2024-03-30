@@ -1,7 +1,7 @@
-import express from "express";
-import cors from "cors";
-import routes from "../route/route.js";
-import {errorMiddleware} from "../middleware/error-middleware.js";
+import express from "express"
+import cors from "cors"
+import routes from "../route/route.js"
+import {errorMiddleware} from "../middleware/error-middleware.js"
 
 export const web = express()
 
